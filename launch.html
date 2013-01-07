@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regular expression fuzzer</title>
+        <script>
+            var i = 0;
+            var interval = null;
+
+            function run()
+            {
+                num = parseInt(document.getElementById('start').value);
+                if (num > 0)
+                {
+                    i = num;
+                    document.getElementById('start').value = 0;
+                }
+                filename = 'samples/regex-' + i + '.html';
+                iframe = document.getElementById('root');
+                iframe.src = filename;
+            }
+        </script>
+        <style>
+            body {
+                margin: 5px;
+                background-color: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <span style="font-size: 1.4em; color: #666;">Regexp fuzzer</span><br/><br/>
+        <input type="text" id="start"><a href="javascript:run();">Run</a><hr/>
+        <iframe id="root" style="width: 100%; height: 100%; border: none;"></iframe>
+    </body>
+</html>
