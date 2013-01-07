@@ -16,3 +16,10 @@ regex-fuzz>main.py
 
 cleanup.py - this script will erase all files in folder "samples/"
 log.php - logger that will write log files to folder "logs/"
+
+Can fuzz JavaScript regular expressions, <input> pattern attribute and Web 
+SQL database. Not all browsers supports all mentioned features.
+
+Found one vulnerability in Opera (and was fixed before managed to report) and 
+one bug in Google Chrome. Not so much for a single fuzzer, but as it was said,
+this is basic regexp fuzzer.
